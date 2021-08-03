@@ -4,10 +4,10 @@ import PlaygroundSupport
 struct ContentView: View {
     var body: some View {
         HStack {
-            CardView()
-            CardView()
-            CardView()
-            CardView()
+            CardView(content: "🚂")
+            CardView(content: "🚀")
+            CardView(content: "🚁")
+            CardView(content: "🚜")
         }
         .padding(.horizontal)
         .foregroundColor(.orange)
@@ -15,6 +15,7 @@ struct ContentView: View {
 }
 
 struct CardView: View {
+    var content: String
     @State var isFaceUp = true
     
     var body: some View {
@@ -24,7 +25,7 @@ struct CardView: View {
                 shape.fill()
                     .foregroundColor(.white)
                 shape.stroke(lineWidth: 3)
-                Text("✈️")
+                Text(content)
                     .font(.largeTitle)
             } else {
                 shape.fill()
