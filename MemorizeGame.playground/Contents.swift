@@ -3,17 +3,46 @@ import PlaygroundSupport
 
 struct ContentView: View {
     var emojis = ["🚲", "🚂", "🚁", "🚜", "🏎", "🚑", "🚓", "🚒", "✈️", "🚀", "⛵️", "🛸", "🛶", "🚌", "🏍", "🛺", "🚠", "🛵", "🚗", "🚚", "🚇", "🛻", "🚝"]
-    var emojiCount = 6
+    @State var emojiCount = 6
     
     var body: some View {
-        HStack {
-            ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
-                CardView(content: emoji)
-            }
+        VStack {
             
+            HStack {
+                ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
+                    CardView(content: emoji)
+                }
+            }
+            HStack {
+                remove
+                Spacer()
+                add
+            }.padding(.horizontal)
         }
         .padding(.horizontal)
         .foregroundColor(.orange)
+    }
+    
+    var remove: some View {
+        Button(action: {
+            emojiCount -= 1
+        }) { 
+            VStack {
+                Text("Remove")
+                Text("Card")
+            }
+        }
+    }
+    
+    var add: some View {
+        Button(action: {
+            emojiCount += 1
+        }) { 
+            VStack {
+                Text("Add")
+                Text("Card")
+            }
+        }
     }
 }
 
@@ -39,6 +68,7 @@ struct CardView: View {
         }
     }
 }
+
 
 
 
