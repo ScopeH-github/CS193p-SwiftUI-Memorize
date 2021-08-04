@@ -6,10 +6,10 @@ struct ContentView: View {
     
     var body: some View {
         HStack {
-            CardView(content: emojis[0])
-            CardView(content: emojis[1])
-            CardView(content: emojis[2])
-            CardView(content: emojis[3])
+            ForEach(emojis, id: \.self) { emoji in
+                CardView(content: emoji)
+            }
+            
         }
         .padding(.horizontal)
         .foregroundColor(.orange)
