@@ -12,6 +12,7 @@ struct ContentView: View {
                     CardView(content: emoji)
                 }
             }
+            Spacer()
             HStack {
                 remove
                 Spacer()
