@@ -18,6 +18,7 @@ struct ContentView: View {
                 Spacer()
                 add
             }.padding(.horizontal)
+            .font(.largeTitle)
         }
         .padding(.horizontal)
         .foregroundColor(.orange)
@@ -25,23 +26,21 @@ struct ContentView: View {
     
     var remove: some View {
         Button(action: {
-            emojiCount -= 1
-        }) { 
-            VStack {
-                Text("Remove")
-                Text("Card")
+            if emojiCount > 0 {
+                emojiCount -= 1
             }
+        }) { 
+            Image(systemName: "minus.circle")
         }
     }
     
     var add: some View {
         Button(action: {
-            emojiCount += 1
-        }) { 
-            VStack {
-                Text("Add")
-                Text("Card")
+            if emojiCount < emojis.count {
+                emojiCount += 1
             }
+        }) { 
+            Image(systemName: "plus.circle")
         }
     }
 }
