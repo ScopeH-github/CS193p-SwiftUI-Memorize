@@ -10,6 +10,7 @@ struct ContentView: View {
             LazyVGrid(columns: [GridItem(),GridItem(),GridItem()]) {
                 ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
                     CardView(content: emoji)
+                        .aspectRatio(2/3, contentMode: .fit)
                 }
             }
             Spacer()
