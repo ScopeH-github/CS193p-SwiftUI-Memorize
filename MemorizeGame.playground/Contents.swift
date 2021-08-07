@@ -16,13 +16,6 @@ struct ContentView: View {
                     }
                 }
             }
-            Spacer()
-            HStack {
-                remove
-                Spacer()
-                add
-            }.padding(.horizontal)
-            .font(.largeTitle)
         }
         .padding(.horizontal)
         .foregroundColor(.orange)
