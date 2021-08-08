@@ -1,6 +1,9 @@
 import SwiftUI
 import PlaygroundSupport
 
+
+
+
 struct ContentView: View {
     var viewModel: EmojiMemoryGame
     @State var emojiCount = 6
@@ -60,7 +63,7 @@ struct CardView: View {
 //: Here is Test Area, Don't Touch!
 //: ---
 // MARK: - PreView Area, DON'T Touch!
-let game = Emoji
+let game = EmojiMemoryGame()
 let view = ContentView(viewModel: game)
 PlaygroundPage.current.setLiveView(view)
 print(PlaygroundPage.current.liveView.debugDescription.description)
