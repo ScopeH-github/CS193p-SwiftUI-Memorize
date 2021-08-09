@@ -16,7 +16,7 @@ public class EmojiMemoryGame {
     }
     
     // MARK: - Intent(s)
-    public func choos(_ card: MemoryGame<String>.Card) {
+    public func choose(_ card: MemoryGame<String>.Card) {
         model.choose(card)
     }
     
