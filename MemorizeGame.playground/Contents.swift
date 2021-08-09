@@ -7,14 +7,12 @@ struct ContentView: View {
     let viewModel: EmojiMemoryGame
     
     var body: some View {
-        VStack {
-            ScrollView {
-                
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
-                    ForEach(viewModel.cards) { card in
-                        CardView(card: card)
-                            .aspectRatio(2/3, contentMode: .fit)
-                    }
+        ScrollView {
+            
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
+                ForEach(viewModel.cards) { card in
+                    CardView(card: card)
+                        .aspectRatio(2/3, contentMode: .fit)
                 }
             }
         }
