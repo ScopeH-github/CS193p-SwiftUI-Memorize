@@ -1,6 +1,6 @@
 import SwiftUI
 
-class EmojiMemoryGame {
+public class EmojiMemoryGame {
     static let emojis = ["🚲", "🚂", "🚁", "🚜", "🏎", "🚑", "🚓", "🚒", "✈️", "🚀", "⛵️", "🛸", "🛶", "🚌", "🏍", "🛺", "🚠", "🛵", "🚗", "🚚", "🚇", "🛻", "🚝"]
     
     static func createMemoryGame() -> MemoryGame<String> {
@@ -11,7 +11,8 @@ class EmojiMemoryGame {
     
     private var model: MemoryGame<String> = createMemoryGame()
     
-    var cards: Array<MemoryGame<String>.Card> {
+    public var cards: Array<MemoryGame<String>.Card> {
         return model.cards
     }
+    public init() {}
 }
