@@ -8,11 +8,13 @@ struct ContentView: View {
     
     var body: some View {
         ScrollView {
-            
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
                 ForEach(viewModel.cards) { card in
                     CardView(card: card)
                         .aspectRatio(2/3, contentMode: .fit)
+                        .onTapGesture {
+                            
+                        }
                 }
             }
         }

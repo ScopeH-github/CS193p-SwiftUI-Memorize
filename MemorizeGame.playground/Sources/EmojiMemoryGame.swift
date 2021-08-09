@@ -14,5 +14,11 @@ public class EmojiMemoryGame {
     public var cards: Array<MemoryGame<String>.Card> {
         return model.cards
     }
+    
+    // MARK: - Intent(s)
+    public func choos(_ card: MemoryGame<String>.Card) {
+        model.choose(card)
+    }
+    
     public init() {}
 }
