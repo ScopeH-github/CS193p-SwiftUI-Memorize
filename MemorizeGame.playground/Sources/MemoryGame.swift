@@ -11,7 +11,12 @@ public struct MemoryGame<CardContent> {
         print("chosenCard = \(chosenCard)")
     }
     
-    func index(of: Card) -> Int {
+    func index(of card: Card) -> Int {
+        for index in 0..<cards.count {
+            if cards[index].id == card.id {
+                return index
+            }
+        }
         return 0
     }
     
