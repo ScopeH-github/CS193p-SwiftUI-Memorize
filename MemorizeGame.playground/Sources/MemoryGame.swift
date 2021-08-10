@@ -5,12 +5,19 @@ public struct MemoryGame<CardContent> {
     private(set) var cards: Array<Card>
     
     func choose(_ card: Card) {
-        print("Hello")
+        let chosenIndex = index(of: card)
+        var chosenCard = cards[chosenIndex]
+        chosenCard.isFaceUp.toggle()
+        print("chosenCard = \(chosenCard)")
+    }
+    
+    func index(of: Card) -> Int {
+        return 0
     }
     
     public init(numberOfPairsOfCards: Int, createCardContent: (Int) -> CardContent) {
         cards = Array<Card>()
-            // add numberOfCards x 2 cards to cards array
+        // add numberOfCards x 2 cards to cards array
         for pairIndex in 0..<numberOfPairsOfCards {
             let content: CardContent = createCardContent(pairIndex)
             cards.append(Card(content: content, id: pairIndex*2))
