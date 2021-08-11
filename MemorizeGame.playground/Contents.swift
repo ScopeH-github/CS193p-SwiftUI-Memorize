@@ -4,7 +4,7 @@ import PlaygroundSupport
 let game = EmojiMemoryGame()
 
 struct ContentView: View {
-    let viewModel: EmojiMemoryGame
+    @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
         ScrollView {
