@@ -31,7 +31,7 @@ public struct MemoryGame<CardContent> {
     }
     
     public struct Card: Identifiable {
-        public var isFaceUp: Bool = true
+        public var isFaceUp: Bool = false
         public var isMatched: Bool = false
         public var content: CardContent
         

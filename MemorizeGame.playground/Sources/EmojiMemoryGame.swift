@@ -17,7 +17,6 @@ public class EmojiMemoryGame: ObservableObject {
     
     // MARK: - Intent(s)
     public func choose(_ card: MemoryGame<String>.Card) {
-        objectWillChange.send()
         model.choose(card)
     }
     
