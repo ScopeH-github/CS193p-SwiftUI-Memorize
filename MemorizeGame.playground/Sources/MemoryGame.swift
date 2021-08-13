@@ -27,8 +27,6 @@ public struct MemoryGame<CardContent> where CardContent: Equatable {
             }
             cards[chosenIndex].isFaceUp.toggle()
         }
-        
-        print("\(cards)\n\n")
     }
     
     public init(numberOfPairsOfCards: Int, createCardContent: (Int) -> CardContent) {
