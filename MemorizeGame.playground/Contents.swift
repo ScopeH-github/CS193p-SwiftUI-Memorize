@@ -1,9 +1,11 @@
+// View Area
+
 import SwiftUI
 import PlaygroundSupport
 
-let game = EmojiMemoryGame()
+private let game = EmojiMemoryGame()
 
-struct ContentView: View {
+struct EmojiMemoryGameView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
@@ -59,6 +61,6 @@ struct CardView: View {
 //: Here is Test Area, Don't Touch!
 //: ---
 // MARK: - PreView Area, DON'T Touch!
-let view = ContentView(viewModel: game)
+let view = EmojiMemoryGameView(viewModel: game)
 PlaygroundPage.current.setLiveView(view)
 print(PlaygroundPage.current.liveView.debugDescription.description)
