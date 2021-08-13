@@ -13,7 +13,7 @@ public class EmojiMemoryGame: ObservableObject {
         }
     }
     
-    @Published private var model: MemoryGame<String> = createMemoryGame()
+    @Published private var model = createMemoryGame()
     
     public var cards: Array<Card> {
         return model.cards
