@@ -13,12 +13,12 @@ public class EmojiMemoryGame: ObservableObject {
     
     @Published private var model: MemoryGame<String> = createMemoryGame()
     
-    public var cards: Array<MemoryGame<String>.Card> {
+    public var cards: Array<Card> {
         return model.cards
     }
     
     // MARK: - Intent(s)
-    public func choose(_ card: MemoryGame<String>.Card) {
+    public func choose(_ card: Card) {
         model.choose(card)
     }
     

@@ -6,16 +6,16 @@ import PlaygroundSupport
 private let game = EmojiMemoryGame()
 
 struct EmojiMemoryGameView: View {
-    @ObservedObject var viewModel: EmojiMemoryGame
+    @ObservedObject var game: EmojiMemoryGame
     
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
-                ForEach(viewModel.cards) { card in
+                ForEach(game.cards) { card in
                     CardView(card: card)
                         .aspectRatio(2/3, contentMode: .fit)
                         .onTapGesture {
-                            viewModel.choose(card)
+                            game.choose(card)
                         }
                 }
             }
@@ -61,6 +61,6 @@ struct CardView: View {
 //: Here is Test Area, Don't Touch!
 //: ---
 // MARK: - PreView Area, DON'T Touch!
-let view = EmojiMemoryGameView(viewModel: game)
+let view = EmojiMemoryGameView(game: game)
 PlaygroundPage.current.setLiveView(view)
 print(PlaygroundPage.current.liveView.debugDescription.description)
