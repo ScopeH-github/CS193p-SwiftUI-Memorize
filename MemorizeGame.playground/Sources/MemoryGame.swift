@@ -44,9 +44,9 @@ public struct MemoryGame<CardContent> where CardContent: Equatable {
     public struct Card: Identifiable {
         public var isFaceUp: Bool = false
         public var isMatched: Bool = false
-        public var content: CardContent
+        public let content: CardContent
         
-        public var id: Int
+        public let id: Int
     }
     
 }
