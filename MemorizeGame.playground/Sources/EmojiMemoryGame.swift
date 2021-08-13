@@ -1,3 +1,5 @@
+// Model Area
+
 import SwiftUI
 
 public class EmojiMemoryGame: ObservableObject {

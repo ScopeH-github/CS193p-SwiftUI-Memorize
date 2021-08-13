@@ -1,3 +1,5 @@
+// MVVM | logic Area
+
 import Foundation
 
 public struct MemoryGame<CardContent> where CardContent: Equatable {
