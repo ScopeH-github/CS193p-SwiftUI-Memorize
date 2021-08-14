@@ -50,7 +50,7 @@ struct CardView: View {
     private struct DrawingConstants {
         static let cornderRadius: CGFloat = 20
         static let lineWidth: CGFloat = 3
-        static let fontScale: CFFloat = 0.75
+        static let fontScale: CGFloat = 0.75
     }
     
 }
