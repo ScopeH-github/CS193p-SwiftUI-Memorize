@@ -12,7 +12,7 @@ struct EmojiMemoryGameView: View {
 //          ScrollView {
 //              LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
 //                  ForEach(game.cards) { card in
-        AspectVGrid(item: game.card, aspectRatio: 2/3) { card in
+        AspectVGrid(items: game.card, aspectRatio: 2/3) { card in
             CardView(card: card)
                 .aspectRatio(2/3, contentMode: .fit)
                 .onTapGesture {
