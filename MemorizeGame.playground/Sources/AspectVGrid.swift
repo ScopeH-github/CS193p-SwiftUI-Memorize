@@ -13,6 +13,7 @@ public struct AspectVGrid<Item, ItemView>: View where ItemView: View, Item: Iden
     }
     
     public var body: some View {
+        GeometryReader { geometry in}
         let width: CGFloat = 100
         LazyVGrid(columns: [adaptiveGridItem(width: width)], spacing: 0) {
             ForEach(items) { item in

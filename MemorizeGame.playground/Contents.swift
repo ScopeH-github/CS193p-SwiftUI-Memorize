@@ -14,7 +14,7 @@ struct EmojiMemoryGameView: View {
 //                  ForEach(game.cards) { card in
         AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
             CardView(card: card)
-                .aspectRatio(2/3, contentMode: .fit)
+                .padding(4)
                 .onTapGesture {
                     game.choose(card)
                 }
