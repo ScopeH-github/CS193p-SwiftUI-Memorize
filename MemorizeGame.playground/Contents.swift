@@ -43,6 +43,7 @@ struct CardView: View {
                     shape.fill()
                         .foregroundColor(.white)
                     shape.strokeBorder(lineWidth: DrawingConstants.lineWidth)
+                    Circle().padding(5).opacity(0.6)
                     Text(card.content).font(font(in: geometry.size))
                 } else if card.isMatched {
                     shape.opacity(0)
@@ -58,9 +59,9 @@ struct CardView: View {
     }
     
     private struct DrawingConstants {
-        static let cornderRadius: CGFloat = 20
+        static let cornderRadius: CGFloat = 10
         static let lineWidth: CGFloat = 3
-        static let fontScale: CGFloat = 0.75
+        static let fontScale: CGFloat = 0.7
     }
     
 }
@@ -81,5 +82,6 @@ struct CardView: View {
 //: ---
 // MARK: - PreView Area, DON'T Touch!
 let view = EmojiMemoryGameView(game: game)
+game.choose(game.cards.first!)
 PlaygroundPage.current.setLiveView(view)
 print(PlaygroundPage.current.liveView.debugDescription.description)
