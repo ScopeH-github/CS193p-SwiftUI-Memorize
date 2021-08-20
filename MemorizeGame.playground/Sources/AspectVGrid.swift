@@ -6,7 +6,7 @@ public struct AspectVGrid<Item, ItemView>: View where ItemView: View, Item: Iden
     public var aspectRatio: CGFloat
     public var content: (Item) -> ItemView
     
-    public init(items: [Item], aspectRatio: CGFloat, content: @escaping (Item) -> ItemView) {
+    public init(items: [Item], aspectRatio: CGFloat, @ViewBuilder content: @escaping (Item) -> ItemView) {
         self.items = items
         self.aspectRatio = aspectRatio
         self.content = content

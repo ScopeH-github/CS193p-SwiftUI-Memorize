@@ -13,11 +13,15 @@ struct EmojiMemoryGameView: View {
 //              LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
 //                  ForEach(game.cards) { card in
         AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
-            CardView(card: card)
-                .padding(4)
-                .onTapGesture {
-                    game.choose(card)
-                }
+            if card.isMatched && !card.isFaceUp {
+                Rectangle().opacity(0)
+            } else {
+                CardView(card: card)
+                    .padding(4)
+                    .onTapGesture {
+                        game.choose(card)
+                    }
+            }
         }
 //                  }
 //              }
