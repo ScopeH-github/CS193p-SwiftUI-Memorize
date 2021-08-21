@@ -14,7 +14,13 @@ public struct Pie: Shape {
         var p = Path()
         p.move(to: center)
         p.addLine(to: start)
-        p.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
+        p.addArc(
+            center: center,
+            radius: radius,
+            startAngle: startAngle,
+            endAngle: endAngle, 
+            clockwise: false
+        )
         return p
     }
 }
