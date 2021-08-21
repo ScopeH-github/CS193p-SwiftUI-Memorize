@@ -9,9 +9,9 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var game: EmojiMemoryGame
     
     var body: some View {
-//          ScrollView {
-//              LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
-//                  ForEach(game.cards) { card in
+        //          ScrollView {
+        //              LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
+        //                  ForEach(game.cards) { card in
         AspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
             if card.isMatched && !card.isFaceUp {
                 Rectangle().opacity(0)
@@ -23,9 +23,9 @@ struct EmojiMemoryGameView: View {
                     }
             }
         }
-//                  }
-//              }
-//          }
+        //                  }
+        //              }
+        //          }
         .padding(.horizontal)
         .foregroundColor(.orange)
     }
@@ -43,7 +43,7 @@ struct CardView: View {
                     shape.fill()
                         .foregroundColor(.white)
                     shape.strokeBorder(lineWidth: DrawingConstants.lineWidth)
-                    Pie(startAngle: Angle(degrees: <#T##Double#>), endAngle: <#T##Angle#>)
+                    Pie(startAngle: Angle(degrees: 0), endAngle: Angle(degrees: 110))
                         .padding(5).opacity(0.6)
                     Text(card.content).font(font(in: geometry.size))
                 } else if card.isMatched {
