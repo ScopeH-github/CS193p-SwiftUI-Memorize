@@ -21,6 +21,7 @@ public struct Pie: Shape {
             endAngle: endAngle, 
             clockwise: false
         )
+        p.addLine(to: center)
         return p
     }
 }
