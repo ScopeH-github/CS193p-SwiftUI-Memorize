@@ -5,7 +5,7 @@ public struct Pie: Shape {
     public var endAngle: Angle
     public var clockwise: Bool = false
     
-    public init(startAngle: Angle, endAngle: Angle, clockwise: Bool) {
+    public init(startAngle: Angle, endAngle: Angle, clockwise: Bool = true) {
         self.startAngle = startAngle
         self.endAngle = endAngle
         self.clockwise = clockwise
