@@ -1,18 +1,27 @@
 import SwiftUI
 public struct Cardify: ViewModifier {
+    var isFaceUp: Bool
+    
+    public init(isFaceUp: Bool) {
+        self.isFaceUp = isFaceUp
+    }
+    
     public func body(content: Content) -> some View {
         ZStack {
             let shape = RoundedRectangle(cornerRadius: DrawingConstants.cornderRadius)
-            if card.isFaceUp {
+            if isFaceUp {
                 shape.fill()
                     .foregroundColor(.white)
                 shape.strokeBorder(lineWidth: DrawingConstants.lineWidth)
-                Pie(startAngle: Angle(degrees: 0-90), endAngle: Angle(degrees: 110-90))
-                    .padding(5).opacity(0.6)
-                Text(card.content).font(font(in: geometry.size))
+                content
             } else {
                 shape.fill()
             }
         }
+    }
+    
+    private struct DrawingConstants {
+        static let cornderRadius: CGFloat = 10
+        static let lineWidth: CGFloat = 3
     }
 }
