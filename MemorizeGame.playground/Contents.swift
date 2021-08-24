@@ -66,6 +66,6 @@ struct CardView: View {
 //: ---
 // MARK: - PreView Area, DON'T Touch!
 let view = EmojiMemoryGameView(game: game)
-game.choose(game.cards.first!)
+//  game.choose(game.cards.first!)
 PlaygroundPage.current.setLiveView(view)
 print(PlaygroundPage.current.liveView.debugDescription.description)
